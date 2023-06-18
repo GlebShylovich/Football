@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcelona</title>
+    <link rel="icon" href="/favicon.7a42797a.png">
+    <link rel="stylesheet" href="/style.f2fe79dc.css">
+    <link rel="stylesheet" href="/style.071adcc8.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-container">
+                <a title="Logo" href="/main.html" class="header-logo">
+                    <img src="/logo.b9b960d1.png" alt="logo">
+                </a>
+                <nav class="header-menu">
+                    <a title="Team" href="/team.html" class="header-item">
+                        Team
+                    </a>
+                    <a title="Matches" href="/matches.html" class="header-item">
+                        Matches
+                    </a>
+                    <a title="Registration" href="/auth.html" class="header-reg">
+                        Login
+                    </a>
+                </nav>
+                <div class="burger-menu">
+                    <input id="menu-toggle" type="checkbox">
+                    <label class="menu-btn" for="menu-toggle">
+                        <span></span>
+                    </label>
+
+                    <ul class="menubox">
+                        <li><a href="/team.html" class="menu-item">Team</a></li>
+                        <li><a href="/matches.html" class="menu-item">Matches</a></li>
+                        <li><a href="/auth.html" class="menu-item">Registration</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="matches-page">
+            <div class="matches-container">
+                <h1>
+                    Last Match
+                </h1>
+                <div id="wg-api-football-game" data-host="v3.football.api-sports.io" data-key="10224672d4c399d4b93e58ee4213682" data-id="878317" data-theme="" data-refresh="15" data-show-errors="false" data-show-logos="true">
+                </div>
+                <script type="module" src="https://widgets.api-sports.io/2.0.3/widgets.js">
+                </script>
+
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <a href="/main.html" class="footer-logo">
+                    <img src="/logo.b9b960d1.png" alt="logo">
+                </a>
+                <nav class="footer-social">
+                    <a href="https://es-es.facebook.com/fcbarcelona/" class="footer-item">
+                        <img src="/facebook.4a10cb3f.png" alt="facebook">
+                    </a>
+                    <a href="https://twitter.com/FCBarcelona" class="footer-item">
+                        <img src="/twitter.d79d9453.png" alt="twitter">
+                    </a>
+                    <a href="https://www.instagram.com/fcbarcelona/" class="footer-item">
+                        <img src="/instagram.8fb81763.png" alt="instagram">
+                    </a>
+                    <a href="https://www.youtube.com/user/fcbarcelona" class="footer-item">
+                        <img src="/youtube.394efba8.png" alt="youtube">
+                    </a>
+                    <a href="https://open.spotify.com/user/31gorrj76f2m3wczoifm6f6tbn3q?si=a20bf0c076684729&nd=1" class="footer-item">
+                        <img src="/spotify.217789d8.png" alt="spotify">
+                    </a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

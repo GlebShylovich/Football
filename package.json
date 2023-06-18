@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "json-server": "^0.17.3"
+  },
+  "name": "project",
+  "version": "1.0.0",
+  "devDependencies": {
+    "sass": "^1.63.4"
+  },
+  "main": "../scripts/auth.js",
+  "scripts": {
+    "dev": "parcel ./pages/auth.html",
+    "build": "parcel build ./pages/auth.html",
+    "deploy": "rm -rf dist/ && npm build && gh-pages -d dist",
+    "front-end": "parcel ./pages/auth.html --open --port 3001",
+    "back-end": "json-server --watch db.json --port 3000"
+  },
+  "homepage": "https://GlebShylovich.github.io/football",
+  "author": "Gleb Shylovich",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,1653 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  line-height: 1;
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #eef0f3;
+}
+
+.wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+
+[class*=-container] {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-bottom: 1px solid #d7dae0;
+}
+.header .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0;
+}
+.header .header-container .burger-menu {
+  display: none;
+}
+.header .header-container .menu-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 101;
+}
+.header .header-container .menu-btn > span,
+.header .header-container .menu-btn > span::before,
+.header .header-container .menu-btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3.5px;
+  background-color: #000;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+.header .header-container .menu-btn > span::before {
+  content: "";
+  top: -8px;
+}
+.header .header-container .menu-btn > span::after {
+  content: "";
+  top: 8px;
+}
+.header .header-container .menubox {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  z-index: 100;
+  background-color: #fff;
+  -webkit-box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+.header .header-container .menu-item {
+  display: block;
+  padding: 12px 24px;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+.header .header-container #menu-toggle {
+  opacity: 0;
+  display: none;
+}
+.header .header-container #menu-toggle:checked ~ .menu-btn > span {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.header .header-container #menu-toggle:checked ~ .menu-btn > span::before {
+  top: 0;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+.header .header-container #menu-toggle:checked ~ .menu-btn > span::after {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.header .header-container #menu-toggle:checked ~ .menubox {
+  visibility: visible;
+  right: 0;
+}
+.header .header-container .header-logo {
+  width: 50px;
+  height: 50px;
+}
+.header .header-container .header-logo img {
+  width: 100%;
+  height: 100%;
+}
+.header .header-container .header-logo:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.header .header-container .header-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+.header .header-container .header-menu .header-item {
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.header .header-container .header-menu .header-item:hover {
+  color: #004d98;
+}
+.header .header-container .header-reg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  outline: 0;
+  cursor: pointer;
+  text-align: center;
+  border: 0;
+  padding: 7px 16px;
+  min-height: 36px;
+  min-width: 36px;
+  color: #ffffff;
+  background: #004d98;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px, rgba(0, 0, 0, 0.2) 0px -1px 0px 0px inset;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px, rgba(0, 0, 0, 0.2) 0px -1px 0px 0px inset;
+  text-decoration: none;
+}
+.header .header-container .header-reg:hover {
+  background: #013a74;
+}
+
+.page {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 100%;
+}
+.page .page-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.page .page-container .next-match {
+  width: 100%;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+.page .page-container .next-match #wg-api-football-game {
+  border-radius: 4px;
+}
+.page .page-container .slider {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 500px;
+  position: relative;
+  border-radius: 5px;
+  margin: 0 0 20px 0;
+}
+.page .page-container .slider .slides {
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+}
+.page .page-container .slider .slides .slide {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
+  transition: width 2s, height 2s, background-color 2s, transform 2s, -webkit-transform 2s;
+}
+.page .page-container .slider .slides .slide .slide-background {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.page .page-container .slider .slides .slide .slide-title {
+  color: white;
+  padding: 20px;
+  font-size: 36px;
+  font-weight: 600;
+  z-index: 2;
+}
+.page .page-container .slider .prev {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-right: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  height: 100%;
+  width: 100px;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 5px 0 0 5px;
+}
+.page .page-container .slider .next {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-left: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  height: 100%;
+  width: 100px;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 0px 5px 5px 0;
+}
+.page .page-container .page-other {
+  margin: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 503.325px;
+}
+.page .page-container .page-other .page-news {
+  -ms-flex-preferred-size: 59%;
+      flex-basis: 59%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.page .page-container .page-other .page-news .news {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 160px;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.page .page-container .page-other .page-news .news:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  border: none;
+}
+.page .page-container .page-other .page-news .news .news-image-box {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  padding: 10px;
+}
+.page .page-container .page-other .page-news .news .news-image-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.page .page-container .page-other .page-news .news .news-text-box {
+  -ms-flex-preferred-size: 65%;
+      flex-basis: 65%;
+  padding: 10px 0;
+}
+.page .page-container .page-other .page-news .news .news-text-box .news-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: black;
+}
+.page .page-container .page-other .page-news .news .news-text-box .news-subtitle {
+  font-size: 14px;
+  line-height: 1.2;
+  color: black;
+  width: 90%;
+}
+.page .page-container .page-other .page-standings {
+  -ms-flex-preferred-size: 39%;
+      flex-basis: 39%;
+  height: 100%;
+  border-radius: 4px;
+  height: 503px;
+  overflow-y: scroll;
+}
+.page .page-container .page-other .page-standings .standings {
+  border-radius: 4px;
+}
+
+.page-team {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.page-team .page-team-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.page-team .page-team-container .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 0;
+  border-bottom: 1px solid #d7dae0;
+}
+.page-team .page-team-container .search .search-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.page-team .page-team-container .search .search-input {
+  background: transparent;
+  border: 1px solid #d8dadc;
+  border-radius: 10px 0 0 10px;
+  padding: 16px 18px;
+  width: 100%;
+  color: #000000;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 6px 0;
+  outline: none;
+}
+.page-team .page-team-container .search .search-btn {
+  padding: 0 15px;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 0 10px 10px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  background-color: #004d98;
+  -webkit-transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+  transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+  height: 40px;
+}
+.page-team .page-team-container .search .search-btn:hover {
+  color: #ffffff;
+  background-color: #013a74;
+}
+.page-team .page-team-container .team-page-title {
+  color: black;
+  margin: 20px 0;
+  font-weight: 500;
+}
+.page-team .page-team-container .user-card {
+  -ms-flex-preferred-size: 24%;
+      flex-basis: 24%;
+  height: 350px;
+  border-radius: 4px;
+  background: #fff;
+}
+.page-team .page-team-container .user-card .card-image-box {
+  width: 100%;
+  height: 80%;
+  border-bottom: 1px solid #cbcbcb;
+}
+.page-team .page-team-container .user-card .card-image-box img {
+  width: 100%;
+  height: 100%;
+}
+.page-team .page-team-container .user-card .card-text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 20%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.page-team .page-team-container .user-card .card-text-box .name {
+  font-size: 16px;
+  color: black;
+  font-weight: 600;
+}
+.page-team .page-team-container .user-card .card-text-box .number {
+  font-size: 24px;
+  color: black;
+  font-weight: 600;
+}
+.page-team .page-team-container .user-card:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.page-team .page-team-container .goalkeepers,
+.page-team .page-team-container .defenders,
+.page-team .page-team-container .midfielders,
+.page-team .page-team-container .forwards {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px 0;
+}
+.page-team .page-team-container .goalkeepers .goalkeepers-title,
+.page-team .page-team-container .goalkeepers .defenders-title,
+.page-team .page-team-container .goalkeepers .midfielders-title,
+.page-team .page-team-container .goalkeepers .forwards-title,
+.page-team .page-team-container .defenders .goalkeepers-title,
+.page-team .page-team-container .defenders .defenders-title,
+.page-team .page-team-container .defenders .midfielders-title,
+.page-team .page-team-container .defenders .forwards-title,
+.page-team .page-team-container .midfielders .goalkeepers-title,
+.page-team .page-team-container .midfielders .defenders-title,
+.page-team .page-team-container .midfielders .midfielders-title,
+.page-team .page-team-container .midfielders .forwards-title,
+.page-team .page-team-container .forwards .goalkeepers-title,
+.page-team .page-team-container .forwards .defenders-title,
+.page-team .page-team-container .forwards .midfielders-title,
+.page-team .page-team-container .forwards .forwards-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 10px;
+}
+.page-team .page-team-container .goalkeepers .goalkeepers-nav,
+.page-team .page-team-container .goalkeepers .defenders-nav,
+.page-team .page-team-container .goalkeepers .midfielders-nav,
+.page-team .page-team-container .goalkeepers .forwards-nav,
+.page-team .page-team-container .defenders .goalkeepers-nav,
+.page-team .page-team-container .defenders .defenders-nav,
+.page-team .page-team-container .defenders .midfielders-nav,
+.page-team .page-team-container .defenders .forwards-nav,
+.page-team .page-team-container .midfielders .goalkeepers-nav,
+.page-team .page-team-container .midfielders .defenders-nav,
+.page-team .page-team-container .midfielders .midfielders-nav,
+.page-team .page-team-container .midfielders .forwards-nav,
+.page-team .page-team-container .forwards .goalkeepers-nav,
+.page-team .page-team-container .forwards .defenders-nav,
+.page-team .page-team-container .forwards .midfielders-nav,
+.page-team .page-team-container .forwards .forwards-nav {
+  margin: 10px 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: flex;
+      -ms-flex-pack: flex;
+          justify-content: flex;
+  -webkit-column-gap: 15.6px;
+     -moz-column-gap: 15.6px;
+          column-gap: 15.6px;
+  row-gap: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.none {
+  display: none;
+}
+
+.container {
+  background-image: url(../images/login-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  height: 100%;
+  height: 100%;
+}
+.container .auth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.container .auth #formSignIn,
+.container .auth #formSignUp {
+  width: 100%;
+  height: 100%;
+}
+.container .auth form {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 55px 45px;
+  border-radius: 40px;
+}
+.container .auth form .form__container-input {
+  width: 100%;
+}
+.container .auth form .form__buttons-sign-in {
+  margin: 6px 0;
+  width: 100%;
+  background: #edeeef;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.container .auth form .form__buttons-sign-in #signIn {
+  margin: 3px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 6px 60px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 125%;
+  text-decoration: none;
+  color: #000000;
+}
+.container .auth form .form__buttons-sign-in #signUp {
+  margin: 3px;
+  padding: 6px 60px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 125%;
+  text-decoration: none;
+  color: #000000;
+}
+.container .auth form .form__buttons-sign-up {
+  margin: 6px 0;
+  width: 100%;
+  background: #edeeef;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.container .auth form .form__buttons-sign-up #signIn {
+  margin: 3px;
+  padding: 6px 60px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 125%;
+  text-decoration: none;
+  color: #000000;
+}
+.container .auth form .form__buttons-sign-up #signUp {
+  margin: 3px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 6px 60px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 125%;
+  text-decoration: none;
+  color: #000000;
+}
+.container .auth form img {
+  display: block;
+  margin: 20px 0;
+  width: 50px;
+  height: 50px;
+}
+.container .auth form h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 130%;
+  /* identical to box height, or 39px */
+  letter-spacing: -0.01em;
+  color: #000000;
+  margin-bottom: 40px;
+}
+.container .auth form input {
+  background: transparent;
+  border: 1px solid #d8dadc;
+  border-radius: 10px;
+  padding: 16px 18px;
+  width: 100%;
+  color: #000000;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 6px 0;
+  outline: none;
+}
+.container .auth form input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 125%;
+  /* identical to box height, or 20px */
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: end;
+          align-items: flex-end;
+  color: rgba(0, 0, 0, 0.5);
+}
+.container .auth form input::-moz-placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 125%;
+  /* identical to box height, or 20px */
+  display: flex;
+  align-items: flex-end;
+  color: rgba(0, 0, 0, 0.5);
+}
+.container .auth form input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 125%;
+  /* identical to box height, or 20px */
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+      align-items: flex-end;
+  color: rgba(0, 0, 0, 0.5);
+}
+.container .auth form input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 125%;
+  /* identical to box height, or 20px */
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+      align-items: flex-end;
+  color: rgba(0, 0, 0, 0.5);
+}
+.container .auth form input::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 125%;
+  /* identical to box height, or 20px */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: rgba(0, 0, 0, 0.5);
+}
+.container .auth form button {
+  padding: 16px 0;
+  vertical-align: middle;
+  width: 100%;
+  cursor: pointer;
+  margin: 6px 0;
+  border: none;
+  -webkit-box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.06);
+          box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.06);
+  background: #004d98;
+  border: 1px solid #004d98;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26px;
+  /* identical to box height */
+  text-align: center;
+  /* White */
+  color: #ffffff;
+}
+.container .auth form button:hover {
+  background-color: transparent;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #004d98;
+}
+
+.matches-page {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.matches-page .matches-container h1 {
+  color: black;
+  margin: 20px 0;
+  font-size: 28px;
+}
+.matches-page .matches-container #wg-api-football-game {
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+.footer {
+  width: 100%;
+}
+.footer .footer-container {
+  padding: 10px 0;
+  border-top: 1px solid #cbcbcb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer .footer-container .footer-logo {
+  width: 50px;
+  height: 50px;
+}
+.footer .footer-container .footer-logo img {
+  width: 100%;
+  height: 100%;
+}
+.footer .footer-container .footer-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer .footer-container .footer-social .footer-item {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+.footer .footer-container .footer-social .footer-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  margin: 3% auto;
+  padding: 20px;
+  border: 1px solid #d7dae0;
+  border-radius: 4px;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modal-content img {
+  display: block;
+  width: 100%;
+  height: 500px;
+  border-radius: 4px;
+}
+.modal-content h1 {
+  margin: 20px 0;
+  text-align: left;
+  color: black;
+}
+.modal-content p {
+  text-align: left;
+  line-height: 1.1;
+  color: black;
+}
+
+.team-modal-content {
+  position: relative;
+  background-color: #fff;
+  margin: 3% auto;
+  padding: 20px;
+  border: 1px solid #d7dae0;
+  width: 37%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 4px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.team-modal-content .modal-info {
+  width: 100%;
+}
+.team-modal-content img {
+  display: block;
+  width: 100%;
+  height: 500px;
+  border-radius: 4px;
+}
+.team-modal-content h1 {
+  margin: 20px 0;
+  text-align: left;
+  color: black;
+}
+.team-modal-content p {
+  text-align: left;
+  line-height: 1.1;
+  color: black;
+}
+
+.card-flex-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card-flex-box .name {
+  font-size: 24px;
+  color: black;
+}
+.card-flex-box .number {
+  font-size: 40px;
+  font-weight: 600;
+  color: black;
+}
+
+.player-position-box {
+  width: 100%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.player-position-box p {
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+}
+.player-position-box .position {
+  margin-left: 5px;
+}
+
+.player-country-box {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #eef0f3;
+}
+.player-country-box p {
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+}
+.player-country-box .country {
+  margin-left: 5px;
+}
+
+.player-age-box {
+  width: 100%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.player-age-box p {
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+}
+.player-age-box .age {
+  margin-left: 5px;
+}
+
+.player-height-box {
+  width: 100%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #eef0f3;
+  border-radius: 4px;
+}
+.player-height-box p {
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+}
+.player-height-box .height {
+  margin-left: 5px;
+}
+
+.player-weight-box {
+  width: 100%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.player-weight-box p {
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+}
+.player-weight-box .weight {
+  margin-left: 5px;
+}
+
+.search-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15.6px;
+  width: 100%;
+}
+.search-box .user-card {
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+@media (max-width: 1200px) {
+  [class*=-container] {
+    max-width: 970px;
+    margin: 0 auto;
+  }
+  .header .header-container {
+    width: 100%;
+  }
+  .header .header-container .header-menu {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+  .header .header-container .header-menu .header-item {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .page .page-container .slider .slides .slide .slide-title {
+    font-size: 32px;
+  }
+  .page .page-container .page-other .page-news .news .news-text-box .news-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .page .page-container .page-other .page-news .news .news-text-box .news-subtitle {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  .modal-content {
+    width: 80%;
+  }
+  .page-team .page-team-container .user-card {
+    -ms-flex-preferred-size: 32%;
+        flex-basis: 32%;
+    height: 400px;
+  }
+  .page-team .page-team-container .user-card .card-text-box .name {
+    font-size: 20px;
+  }
+  .page-team .page-team-container .user-card .card-text-box .number {
+    font-size: 32px;
+  }
+  .page-team .page-team-container .goalkeepers .goalkeepers-nav,
+.page-team .page-team-container .goalkeepers .defenders-nav,
+.page-team .page-team-container .goalkeepers .midfielders-nav,
+.page-team .page-team-container .goalkeepers .forwards-nav,
+.page-team .page-team-container .defenders .goalkeepers-nav,
+.page-team .page-team-container .defenders .defenders-nav,
+.page-team .page-team-container .defenders .midfielders-nav,
+.page-team .page-team-container .defenders .forwards-nav,
+.page-team .page-team-container .midfielders .goalkeepers-nav,
+.page-team .page-team-container .midfielders .defenders-nav,
+.page-team .page-team-container .midfielders .midfielders-nav,
+.page-team .page-team-container .midfielders .forwards-nav,
+.page-team .page-team-container .forwards .goalkeepers-nav,
+.page-team .page-team-container .forwards .defenders-nav,
+.page-team .page-team-container .forwards .midfielders-nav,
+.page-team .page-team-container .forwards .forwards-nav {
+    -webkit-column-gap: 19.4px;
+       -moz-column-gap: 19.4px;
+            column-gap: 19.4px;
+    row-gap: 19.4px;
+  }
+  .team-modal-content {
+    width: 50%;
+  }
+}
+@media (max-width: 992px) {
+  [class*=-container] {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  .header .header-container {
+    width: 100%;
+  }
+  .header .header-container .header-menu {
+    -ms-flex-preferred-size: 35%;
+        flex-basis: 35%;
+  }
+  .header .header-container .header-menu .header-item {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .page .page-container .slider {
+    height: 400px;
+  }
+  .page .page-container .slider .slides .slide .slide-title {
+    font-size: 14px;
+  }
+  .page .page-container .slider {
+    max-height: 400px;
+  }
+  .page .page-container .slider .slides .slide .slide-title {
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .page .page-container .slider .controls .prev,
+.page .page-container .slider .controls .next {
+    height: 40px;
+    width: 40px;
+  }
+  .page .page-container .page-other {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+  }
+  .page .page-container .page-other .page-news {
+    width: 100%;
+  }
+  .page .page-container .page-other .page-news .news {
+    margin: 10px 0;
+    height: 510px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px;
+  }
+  .page .page-container .page-other .page-news .news .news-text-box {
+    padding: 10px;
+    height: 100px;
+  }
+  .page .page-container .page-other .page-news .news .news-text-box .news-title {
+    font-size: 24px;
+  }
+  .page .page-container .page-other .page-news .news .news-text-box .news-subtitle {
+    font-size: 16px;
+  }
+  .page .page-container .page-other .page-news .news .news-image-box {
+    height: 400px;
+    width: 100%;
+  }
+  .page .page-container .page-other .page-standings {
+    width: 100%;
+    height: 100%;
+  }
+  .page .page-container .page-other .page-standings #wg-api-football-standings {
+    margin: 10px 0;
+  }
+  .page-team .page-team-container .user-card {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+    height: 450px;
+  }
+  .page-team .page-team-container .user-card .card-text-box .name {
+    font-size: 20px;
+  }
+  .page-team .page-team-container .user-card .card-text-box .number {
+    font-size: 32px;
+  }
+  .page-team .page-team-container .goalkeepers .goalkeepers-nav,
+.page-team .page-team-container .goalkeepers .defenders-nav,
+.page-team .page-team-container .goalkeepers .midfielders-nav,
+.page-team .page-team-container .goalkeepers .forwards-nav,
+.page-team .page-team-container .defenders .goalkeepers-nav,
+.page-team .page-team-container .defenders .defenders-nav,
+.page-team .page-team-container .defenders .midfielders-nav,
+.page-team .page-team-container .defenders .forwards-nav,
+.page-team .page-team-container .midfielders .goalkeepers-nav,
+.page-team .page-team-container .midfielders .defenders-nav,
+.page-team .page-team-container .midfielders .midfielders-nav,
+.page-team .page-team-container .midfielders .forwards-nav,
+.page-team .page-team-container .forwards .goalkeepers-nav,
+.page-team .page-team-container .forwards .defenders-nav,
+.page-team .page-team-container .forwards .midfielders-nav,
+.page-team .page-team-container .forwards .forwards-nav {
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+    row-gap: 30px;
+  }
+  .team-modal-content {
+    width: 60%;
+  }
+}
+@media (max-width: 767px) {
+  [class*=-container] {
+    max-width: none;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  .header .header-container {
+    padding: 10px 15px;
+  }
+  .header .header-container .header-menu {
+    display: none;
+  }
+  .header .header-container .burger-menu {
+    display: block;
+  }
+  .header .header-container .header-logo {
+    width: 45px;
+    height: 45px;
+  }
+  .header .search {
+    width: 100%;
+  }
+  .header .search .search-container {
+    padding: 10px 15px;
+  }
+  .page .page-container .page-other .page-news .news {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 400px;
+  }
+  .page .page-container .page-other .page-news .news .news-image-box {
+    height: 260px;
+    width: 100%;
+  }
+  .page .page-container .page-other .page-news .news .news-image-box img {
+    width: 100%;
+  }
+  .page .page-container .page-other .page-news .news .news-text-box {
+    height: 0;
+  }
+  .page-team .page-team-container .user-card {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+    height: 400px;
+  }
+  .page-team .page-team-container .user-card .card-text-box .name {
+    font-size: 20px;
+  }
+  .page-team .page-team-container .user-card .card-text-box .number {
+    font-size: 32px;
+  }
+  .page-team .page-team-container .goalkeepers .goalkeepers-nav,
+.page-team .page-team-container .goalkeepers .defenders-nav,
+.page-team .page-team-container .goalkeepers .midfielders-nav,
+.page-team .page-team-container .goalkeepers .forwards-nav,
+.page-team .page-team-container .defenders .goalkeepers-nav,
+.page-team .page-team-container .defenders .defenders-nav,
+.page-team .page-team-container .defenders .midfielders-nav,
+.page-team .page-team-container .defenders .forwards-nav,
+.page-team .page-team-container .midfielders .goalkeepers-nav,
+.page-team .page-team-container .midfielders .defenders-nav,
+.page-team .page-team-container .midfielders .midfielders-nav,
+.page-team .page-team-container .midfielders .forwards-nav,
+.page-team .page-team-container .forwards .goalkeepers-nav,
+.page-team .page-team-container .forwards .defenders-nav,
+.page-team .page-team-container .forwards .midfielders-nav,
+.page-team .page-team-container .forwards .forwards-nav {
+    -webkit-column-gap: 19.4px;
+       -moz-column-gap: 19.4px;
+            column-gap: 19.4px;
+    row-gap: 19.4px;
+  }
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 3% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .modal-content img {
+    display: none;
+  }
+  .modal-content h1 {
+    margin: 20px 0;
+    text-align: left;
+  }
+  .modal-content p {
+    text-align: left;
+    line-height: 1.1;
+  }
+  .team-modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 3% auto;
+    padding: 20px;
+    border: 1px solid #d7dae0;
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .team-modal-content img {
+    display: block;
+    width: 100%;
+    height: 250px;
+  }
+  .team-modal-content h1 {
+    margin: 20px 0;
+    text-align: left;
+    font-size: 20px;
+  }
+  .team-modal-content p {
+    text-align: left;
+    line-height: 1.1;
+  }
+}
+@media (max-width: 670px) {
+  .page .page-container .slider {
+    display: none;
+  }
+  .footer .footer-container {
+    padding: 10px 15px;
+  }
+  .footer .footer-container .footer-logo {
+    height: 45px;
+    width: 45px;
+  }
+  .team-modal-content {
+    width: 90%;
+  }
+}
+@media (max-width: 570px) {
+  .page-team .page-team-container .user-card {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    height: 600px;
+  }
+  .page-team .page-team-container .user-card .card-text-box .name {
+    font-size: 32px;
+  }
+  .page-team .page-team-container .user-card .card-text-box .number {
+    font-size: 46px;
+  }
+  .page-team .page-team-container .goalkeepers .goalkeepers-nav,
+.page-team .page-team-container .goalkeepers .defenders-nav,
+.page-team .page-team-container .goalkeepers .midfielders-nav,
+.page-team .page-team-container .goalkeepers .forwards-nav,
+.page-team .page-team-container .defenders .goalkeepers-nav,
+.page-team .page-team-container .defenders .defenders-nav,
+.page-team .page-team-container .defenders .midfielders-nav,
+.page-team .page-team-container .defenders .forwards-nav,
+.page-team .page-team-container .midfielders .goalkeepers-nav,
+.page-team .page-team-container .midfielders .defenders-nav,
+.page-team .page-team-container .midfielders .midfielders-nav,
+.page-team .page-team-container .midfielders .forwards-nav,
+.page-team .page-team-container .forwards .goalkeepers-nav,
+.page-team .page-team-container .forwards .defenders-nav,
+.page-team .page-team-container .forwards .midfielders-nav,
+.page-team .page-team-container .forwards .forwards-nav {
+    -webkit-column-gap: 19.4px;
+       -moz-column-gap: 19.4px;
+            column-gap: 19.4px;
+    row-gap: 19.4px;
+  }
+  .team-modal-content {
+    width: 90%;
+  }
+}
+@media (max-width: 420px) {
+  .page-team .page-team-container .user-card {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    height: 500px;
+  }
+  .page-team .page-team-container .user-card .card-text-box .name {
+    font-size: 24px;
+  }
+  .page-team .page-team-container .user-card .card-text-box .number {
+    font-size: 32px;
+  }
+  .page-team .page-team-container .goalkeepers .goalkeepers-nav,
+.page-team .page-team-container .goalkeepers .defenders-nav,
+.page-team .page-team-container .goalkeepers .midfielders-nav,
+.page-team .page-team-container .goalkeepers .forwards-nav,
+.page-team .page-team-container .defenders .goalkeepers-nav,
+.page-team .page-team-container .defenders .defenders-nav,
+.page-team .page-team-container .defenders .midfielders-nav,
+.page-team .page-team-container .defenders .forwards-nav,
+.page-team .page-team-container .midfielders .goalkeepers-nav,
+.page-team .page-team-container .midfielders .defenders-nav,
+.page-team .page-team-container .midfielders .midfielders-nav,
+.page-team .page-team-container .midfielders .forwards-nav,
+.page-team .page-team-container .forwards .goalkeepers-nav,
+.page-team .page-team-container .forwards .defenders-nav,
+.page-team .page-team-container .forwards .midfielders-nav,
+.page-team .page-team-container .forwards .forwards-nav {
+    -webkit-column-gap: 19.4px;
+       -moz-column-gap: 19.4px;
+            column-gap: 19.4px;
+    row-gap: 19.4px;
+  }
+  .team-modal-content {
+    width: 90%;
+  }
+}
+@media (max-width: 500px) {
+  .container .auth {
+    width: 90%;
+  }
+  .container .auth form .form__buttons-sign-in {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 3px;
+  }
+  .container .auth form .form__buttons-sign-in a {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container .auth form .form__buttons-sign-up {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 3px;
+  }
+  .container .auth form .form__buttons-sign-up a {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 3px 0;
+  }
+}
+@media (max-width: 370px) {
+  .page-team .page-team-container .user-card {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    height: 400px;
+  }
+  .page-team .page-team-container .user-card .card-text-box .name {
+    font-size: 20px;
+  }
+  .page-team .page-team-container .user-card .card-text-box .number {
+    font-size: 32px;
+  }
+  .page-team .page-team-container .goalkeepers .goalkeepers-nav,
+.page-team .page-team-container .goalkeepers .defenders-nav,
+.page-team .page-team-container .goalkeepers .midfielders-nav,
+.page-team .page-team-container .goalkeepers .forwards-nav,
+.page-team .page-team-container .defenders .goalkeepers-nav,
+.page-team .page-team-container .defenders .defenders-nav,
+.page-team .page-team-container .defenders .midfielders-nav,
+.page-team .page-team-container .defenders .forwards-nav,
+.page-team .page-team-container .midfielders .goalkeepers-nav,
+.page-team .page-team-container .midfielders .defenders-nav,
+.page-team .page-team-container .midfielders .midfielders-nav,
+.page-team .page-team-container .midfielders .forwards-nav,
+.page-team .page-team-container .forwards .goalkeepers-nav,
+.page-team .page-team-container .forwards .defenders-nav,
+.page-team .page-team-container .forwards .midfielders-nav,
+.page-team .page-team-container .forwards .forwards-nav {
+    -webkit-column-gap: 19.4px;
+       -moz-column-gap: 19.4px;
+            column-gap: 19.4px;
+    row-gap: 19.4px;
+  }
+  .team-modal-content {
+    width: 90%;
+  }
+}

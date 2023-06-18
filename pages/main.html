@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcelona</title>
+    <link rel="icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/style.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-container">
+                <a title="Logo" href="../pages/main.html" class="header-logo">
+                    <img src="../images/logo.png" alt="logo">
+                </a>
+                <nav class="header-menu">
+                    <a title="Team" href="../pages/team.html" class="header-item">
+                        Team
+                    </a>
+                    <a title="Matches" href="../pages/matches.html" class="header-item">
+                        Matches
+                    </a>
+                    <a class="header-reg" href="../pages/auth.html">Log In</a>
+                </nav>
+                <div class="burger-menu">
+                    <input id="menu-toggle" type="checkbox" />
+                    <label class="menu-btn" for="menu-toggle">
+                        <span></span>
+                    </label>
+
+                    <ul class="menubox">
+                        <li><a href="../pages/team.html" class="menu-item">Team</a></li>
+                        <li><a href="../pages/matches.html" class="menu-item">Matches</a></li>
+                        <li><a href="../pages/auth.html" class="menu-item">Registration</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main class="page">
+            <div class="page-container">
+                <div class="next-match">
+                    <div id="wg-api-football-game" data-host="v3.football.api-sports.io"
+                        data-key="10224672d4c399d4b93e58ee4213682" data-id="878317" data-theme="" data-refresh="15"
+                        data-show-errors="false" data-show-logos="true">
+                    </div>
+                </div>
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide">
+                            <img class="slide-background" src="" alt="">
+                            <p class="slide-title"></p>
+                        </div>
+                        <div class="slide">
+                            <img class="slide-background" src="" alt="">
+                            <p class="slide-title"></p>
+                        </div>
+                        <div class="slide">
+                            <img class="slide-background" src="" alt="">
+                            <p class="slide-title"></p>
+                        </div>
+                    </div>
+                    <div class="prev">
+                        <img src="../images/previous.png" alt="">
+                    </div>
+                    <div class="next">
+                        <img src="../images/next.png" alt="">
+                    </div>
+                </div>
+                <div class="page-other">
+                    <article class="page-news">
+                        <div class="news">
+                            <div class="news-image-box">
+                                <img class="news-image" src="" alt="news title">
+                            </div>
+                            <div class="news-text-box">
+                                <p class="news-title"></p>
+                                <p class="news-subtitle"></p>
+                            </div>
+                        </div>
+                        <div class="news">
+                            <div class="news-image-box">
+                                <img class="news-image" src="" alt="news title">
+                            </div>
+                            <div class="news-text-box">
+                                <p class="news-title"></p>
+                                <p class="news-subtitle"></p>
+                            </div>
+                        </div>
+                        <div class="news">
+                            <div class="news-image-box">
+                                <img class="news-image" src="" alt="news title">
+                            </div>
+                            <div class="news-text-box">
+                                <p class="news-title"></p>
+                                <p class="news-subtitle"></p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="page-standings">
+                        <div id="wg-api-football-standings" data-host="v3.football.api-sports.io"
+                            data-key="10224672d4c399d4b93e58ee4213682" data-league="140" data-team=""
+                            data-season="2022" data-theme="" data-show-errors="false" data-show-logos="true"
+                            class="wg_loader">
+                        </div>
+                        <script type="module" src="https://widgets.api-sports.io/2.0.3/widgets.js">
+                        </script>
+                    </article>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-container">
+                <a href="../pages/main.html" class="footer-logo">
+                    <img src="../images/logo.png" alt="logo">
+                </a>
+                <nav class="footer-social">
+                    <a href="https://es-es.facebook.com/fcbarcelona/" class="footer-item">
+                        <img src="../images/facebook.png" alt="facebook">
+                    </a>
+                    <a href="https://twitter.com/FCBarcelona" class="footer-item">
+                        <img src="../images/twitter.png" alt="twitter">
+                    </a>
+                    <a href="https://www.instagram.com/fcbarcelona/" class="footer-item">
+                        <img src="../images/instagram.png" alt="instagram">
+                    </a>
+                    <a href="https://www.youtube.com/user/fcbarcelona" class="footer-item">
+                        <img src="../images/youtube.png" alt="youtube">
+                    </a>
+                    <a href="https://open.spotify.com/user/31gorrj76f2m3wczoifm6f6tbn3q?si=a20bf0c076684729&nd=1"
+                        class="footer-item">
+                        <img src="../images/spotify.png" alt="spotify">
+                    </a>
+                </nav>
+            </div>
+        </footer>
+        <div id="myModal" class="modal">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+    <script src="../scripts/main.js"></script>
+    <script type="module" src="https://widgets.api-sports.io/2.0.3/widgets.js"></script>
+</body>
+
+</html>
